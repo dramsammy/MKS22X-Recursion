@@ -31,5 +31,21 @@ public class recursion{
     }
     return fibMemorize(n, 0, 1);
   }
-
+  public static double sqrt(double n, double tolerance){
+    boolean fitTolerance = true;
+    double guess;
+    while(fitTolerance){
+      if ((Math.pow(guess, 2)/n) == tolerance){
+        return guess;
+      }
+    }
+    }
+  private static double sqrtGuess(double n, double tolerance, double guess){
+    boolean fitTolerance = true;
+    while(fitTolerance){
+      if ((Math.pow(guess, 2)/n) == tolerance){
+        return guess;
+      }
+    }
+  }
 }
