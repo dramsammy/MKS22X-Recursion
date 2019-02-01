@@ -14,7 +14,17 @@ public class recursion{
   //   return 0;
   // }
   public static void main(String[] args) {
-    System.out.println(fib(0));
+    // TESTING FIBONACCI SEQUENCE
+    System.out.println("--------------- Testing Fibonacci Sequence ---------------");
+    System.out.println("Should be: 1");
+    System.out.println("Actual: " + fib(0));
+    System.out.println("Should be: 55");
+    System.out.println("Actual: " + fib(10));
+    System.out.println("Should be: 610");
+    System.out.println("Actual: " + fib(15));
+    System.out.println("Should be: 6765");
+    System.out.println("Actual: " + fib(20));
+    System.out.println("--------------- Testing SquareRoot ---------------");
   }
   private static int fibMemorize(int n, int zero, int one){
     if (n == 0){ //base case starts off with 0 increases in value for tree... memorized value
