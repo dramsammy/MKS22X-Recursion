@@ -67,10 +67,12 @@ public class recursion{
   }
   public static ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> makeAllSums = new ArrayList<Integer>();
+    return makeAllSumsH(int n, makeAllSums)
   }
   private static ArrayList<Integer> makeAllSumsH(int n, ArrayList<Integer> ary, int sum){
     if (n == 0){
-      return sum;
+      ary.add(sum);
+      return ary;
     }
     else{
       makeAllSumsH(n - 1, ary, sum + n);
