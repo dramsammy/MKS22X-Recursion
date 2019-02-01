@@ -18,4 +18,12 @@ public class recursion{
   public static void main(String[] args) {
     System.out.println(fib(10));
   }
+  private static int fibMemorize(int n, int previous, int next){
+    if (n == 0){
+      return 0;
+    }
+    if (n <= 2){
+      return 1;
+    }
+  }
 }
