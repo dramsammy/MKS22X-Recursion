@@ -14,20 +14,14 @@ public class recursion{
   //   return 0;
   // }
   public static void main(String[] args) {
-    System.out.println(fib(5));
+    System.out.println(fib(10));
   }
   private static int fibMemorize(int n, int zero, int one){
     if (n == 0){
       return zero;
     }
-    if (n == 1){
-      return one;
-    }
-    if (n == 2){
-      return one + one;
-    }
-    if (n > 2){
-      return fibMemorize(n - 1, previous, previous0) + previous0;
+    if (n > 0){
+      return fibMemorize(n - 1, one, one + zero) + one;
     }
     return 0;
   }
