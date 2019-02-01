@@ -25,7 +25,10 @@ public class recursion{
     System.out.println("Should be: 6765");
     System.out.println("Actual: " + fib(20));
     System.out.println("--------------- Testing SquareRoot ---------------");
-    System.out.println(sqrt(2,0));
+    System.out.println("Should be around: 1.4");
+    System.out.println("Actual: " + sqrt(2,0.1));
+    System.out.println("Should be around: 9");
+    System.out.println("Actual: " + sqrt(9,0.0001));
   }
   private static int fibMemorize(int n, int zero, int one){
     if (n == 0){ //base case starts off with 0 increases in value for tree... memorized value
@@ -43,18 +46,16 @@ public class recursion{
     return fibMemorize(n, 0, 1);
   }
   public static double sqrt(double n, double tolerance){
-    return sqrtGuess(n, 0.1, 1);
+    return sqrtGuess(n, tolerance, 1);
     }
   private static double sqrtGuess(double n, double tolerance, double guess){
     boolean fitTolerance = true;
     while(fitTolerance){
-      if (((Math.pow(guess, 2)) - n)/n <=tolerance){
-        System.out.println(guess);
+      if (Math.abs(1 - ((Math.pow(guess, 2))/n)) <=tolerance){
         fitTolerance = false;
         return guess;
       }
       else{
-        System.out.println(guess);
         return sqrtGuess(n, tolerance, (n/guess + guess)/2.0);
 
       }
