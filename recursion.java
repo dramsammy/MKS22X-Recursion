@@ -14,14 +14,14 @@ public class recursion{
   //   return 0;
   // }
   public static void main(String[] args) {
-    System.out.println(fib(10));
+    System.out.println(fib(15));
   }
   private static int fibMemorize(int n, int zero, int one){
     if (n == 0){
       return zero;
     }
     if (n > 0){
-      return fibMemorize(n - 1, one, one + zero) + one;
+      return fibMemorize(n - 1, one, one + zero);
     }
     return 0;
   }
