@@ -16,15 +16,18 @@ public class recursion{
   public static void main(String[] args) {
     System.out.println(fib(5));
   }
-  private static int fibMemorize(int n, int previous, int previous0){
+  private static int fibMemorize(int n, int zero, int one){
     if (n == 0){
-      return previous;
+      return zero;
     }
-    if (n <= 2){
-      return previous + previous;
+    if (n == 1){
+      return one;
+    }
+    if (n == 2){
+      return one + one;
     }
     if (n > 2){
-      return fibMemorize(n - 1, previous, previous0) + previous;
+      return fibMemorize(n - 1, previous, previous0) + previous0;
     }
     return 0;
   }
