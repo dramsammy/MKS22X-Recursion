@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class recursion{
   // public static int fib(int n){
   //   int temp;
@@ -29,6 +30,8 @@ public class recursion{
     System.out.println("Actual: " + sqrt(2,0.1));
     System.out.println("Should be around: 9");
     System.out.println("Actual: " + sqrt(9,0.0001));
+    System.out.println("Should be around: 12.529");
+    System.out.println("Actual: " + sqrt(157,0.0001));
   }
   private static int fibMemorize(int n, int zero, int one){
     if (n == 0){ //base case starts off with 0 increases in value for tree... memorized value
@@ -61,5 +64,12 @@ public class recursion{
       }
     }
     return guess;
+  }
+  public static ArrayList<Integer> makeAllSums(int n){
+  }
+  private static makeAllSumsH(int n, ArrayList<Integer> ary, int sum){
+    if (n == 0){
+      return sum;
+    }
   }
 }
