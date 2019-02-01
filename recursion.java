@@ -67,7 +67,7 @@ public class recursion{
   }
   public static ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> makeAllSums = new ArrayList<Integer>();
-    return makeAllSumsH(int n, makeAllSums)
+    return makeAllSumsH(n, makeAllSums, 0);
   }
   private static ArrayList<Integer> makeAllSumsH(int n, ArrayList<Integer> ary, int sum){
     if (n == 0){
@@ -77,6 +77,7 @@ public class recursion{
     else{
       makeAllSumsH(n - 1, ary, sum + n);
       makeAllSums(n - 1, ary, sum);
+
     }
     return ary;
   }
