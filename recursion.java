@@ -14,7 +14,7 @@ public class recursion{
   //   return 0;
   // }
   public static void main(String[] args) {
-    System.out.println(fib(2));
+    System.out.println(fib(0));
   }
   private static int fibMemorize(int n, int zero, int one){
     if (n == 0){ //base case starts off with 0 increases in value for tree... memorized value
@@ -26,6 +26,10 @@ public class recursion{
     return 0;
   }
   public static int fib(int n){
+    if (n == 0){
+      return 1;
+    }
     return fibMemorize(n, 0, 1);
   }
+
 }
