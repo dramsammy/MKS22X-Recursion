@@ -32,6 +32,8 @@ public class recursion{
     System.out.println("Actual: " + sqrt(9,0.0001));
     System.out.println("Should be around: 12.529");
     System.out.println("Actual: " + sqrt(157,0.0001));
+    System.out.println("--------------- Testing makeAllSums Method ---------------");
+    System.out.println(makeAllSums(3));
   }
   private static int fibMemorize(int n, int zero, int one){
     if (n == 0){ //base case starts off with 0 increases in value for tree... memorized value
@@ -75,8 +77,8 @@ public class recursion{
       return ary;
     }
     else{
-      makeAllSumsH(n - 1, ary, sum + n);
-      makeAllSums(n - 1, ary, sum);
+      makeAllSumsH(n - 1, ary, sum);
+      makeAllSumsH(n - 1, ary, sum - n);
 
     }
     return ary;
