@@ -77,9 +77,8 @@ public class recursion{
       return ary;
     }
     else{
+      makeAllSumsH(n - 1, ary, sum + n);
       makeAllSumsH(n - 1, ary, sum);
-      makeAllSumsH(n - 1, ary, sum - n);
-
     }
     return ary;
   }
