@@ -48,12 +48,12 @@ public class recursion{
     return 0;
   }
   public static int fib(int n){
-    if (n == 0){
-      return 1;
-    }
     return fibMemorize(n, 0, 1);
   }
   public static double sqrt(double n, double tolerance){
+    if (n == 0.0){
+      return 0.0;
+    }
     return sqrtGuess(n, tolerance, 1);
     }
   private static double sqrtGuess(double n, double tolerance, double guess){
